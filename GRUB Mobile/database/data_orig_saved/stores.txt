@@ -1,0 +1,17 @@
+NULL, WalMart,, 150 N Beckley St, Lancaster, TX, 75146, 1844);
+NULL, Albertsons, , 1300 W Belt Line Rd, Desoto, TX, 75115,3628);
+NULL, Tom Thumb, , 210 E Pleasant Run Rd, Desoto, TX, 75115,3938);
+NULL, Kroger, , 1001 N I 35 E # 500, Desoto, TX, 75115,6800);
+NULL, Minyard, , 919 N Dallas Ave, Lancaster, TX, 75146,1615);
+NULL, Safeway, , , Dallas, TX, 75154,);
+NULL, QFC, , , Dallas, TX, 75154,);
+NULL, Whole Foods, , , Dallas, TX, 75154,);
+NULL, Smiths, , , Dallas, TX, 75154,);
+NULL, Target, , U S Hwy 67, Cedar Hill, TX, 75104,);
+NULL, Ralphs, , , Dallas, TX, 75154,);
+NULL, Fiesta, , , Dallas, TX, 75154,);
+NULL, HEC,, , Dallas, TX, 75154,);
+NULL, Piggly wiggly, , , Dallas, TX, 75154,);
+NULL, Winn Dixie, , , Dallas, TX, 75154,);
+NULL, Costco, , 250 W Highway 67, Duncanville, TX, 75137,4415);
+NULL, Sams, , 2900 Wheatland Rd, Dallas, TX, 75237,);

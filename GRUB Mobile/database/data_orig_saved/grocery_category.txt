@@ -1,0 +1,22 @@
+NULL, Bakery
+NULL, Deli
+NULL, Fruits
+NULL, Vegtables
+NULL, Bread
+NULL, Dairy
+NULL, Condiments
+NULL, Beverages
+NULL, Baking
+NULL, Spices
+NULL, Sauces/Oils
+NULL, Meat/Seafood
+NULL, Can/Jar Goods
+NULL, Packaged Foods
+NULL, Frozen Foods
+NULL, Snacks
+NULL, Breakfast
+NULL, Paper/Wraps
+NULL, Cleaning
+NULL, Personal Care
+NULL, Baby
+NULL, Pets

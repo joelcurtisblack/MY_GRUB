@@ -1,0 +1,97 @@
+                                GRUB Data Model
+
+GROCERY_CATALOG
+==================
+Item_Id - Number (AutoGen)
+Category_Id - Number(ForeignKey) (PK)
+Food_Type_ID - Number(ForeignKey) (PK)
+Generic_Item_Name - String (PK)
+Specific_Item_Name - String (PK) (not required)
+Brand_Name - String (PK) (not required)
+UPC - Number (not required)
+UPC_Barcode_Image_FilePath - String (filepath) (not required)
+Icon_Image_FilePath - String (filepath) (not required)
+
+GROCERY_CATEGORIES 
+==================
+Item_Id - Number
+Name = (PK) String
+
+FOOD_TYPE
+===============
+Item_Id - Number
+Name - String (PK)
+
+
+PANTRY
+=======
+Item_Id - Number (AutoGen)
+Grocery_Item_Id - Number (ForeignKey) (PK)
+Staple_Indicator - Boolean
+Quantity - Number
+Size_Type_Id (ForeignKey) (PK)
+Size_Value = Number (PK)
+Store Id - Number
+Cost - Number (Decimal)
+
+CONTAINER_SIZES
+==================
+Item_Id
+Size_Name - String (PK) (gl,liter,oz,lbs,grams,quart,pint, etc.)
+
+GROCERY_STORES
+===============
+Item_Id - Number (Autogen)
+Store_Name = String (PK)
+Store_Number = Number (PK)
+Street_Address  = String 
+City = String
+State  = String
+ZipCode = String (Needs to support the dash character)
+
+SHOPPING_LISTS
+===============
+Item_Id - Number (AutoGen)
+Name - String (PK)
+Store_Id - Number (PK) (ForeignKey)
+Due_Date - Date
+Notification_Alarm - TimeStamp
+
+
+SHOPPING_LISTS_ITEMS
+======================
+Item_Id - Number
+Shopping_List_Item_Id - Number (ForeignKey) (PK)
+Grocery_Item_Id - Number (ForeignKey) (PK)
+Size_Id (ForeignKey) (PK)
+Size_Value = Number (PK)
+Quantity - Number
+Cost- Number (Decimal)
+
+Shopping Cart
+====================
+Item_Id - Number
+Shopping_List_Item_Id - Number (ForeignKey) (PK)
+
+
+DISCOUNT_TYPES
+===============
+Item_Id - Number (PK, Autogen)
+Type - String
+
+
+Shopping Item Discounts
+=============================
+Item_Id - Number (PK, Autogen)
+Discount_Type_Id - Number (ForeignKey)
+Shopping_Lists_Item_Id - Number (ForeignKey)
+Product_Name - String
+Manufacturer - String
+Value - Number (Float)
+Notes - String (limited lenght of text)
+
+
+
+
+
+

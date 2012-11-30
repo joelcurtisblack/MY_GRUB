@@ -1,0 +1,156 @@
+NULL,SPICES,All Purpose Seasoning
+NULL,SPICES,Allspice
+NULL,SPICES,Anise Seed
+NULL,SPICES,Arrowroot Powder
+NULL,SPICES,Basil
+NULL,SPICES,Basil Leaf
+NULL,SPICES,Bay Leaves
+NULL,SPICES,Black Pepper
+NULL,SPICES,Black Peppercorn
+NULL,SPICES,Black Sea Salt
+NULL,SPICES,Brown Sugar
+NULL,SPICES,Butter Buds
+NULL,SPICES,Cajun Seasoning
+NULL,SPICES,Caraway Seeds
+NULL,SPICES,Cayenne Pepper
+NULL,SPICES,Celery Seeds
+NULL,SPICES,Chervil Leaf
+NULL,SPICES,Chile Pepper
+NULL,SPICES,Chili Powder
+NULL,SPICES,Chipotle Pepper
+NULL,SPICES,Chopped Chives
+NULL,SPICES,Chopped Onion
+NULL,SPICES,Cilantro
+NULL,SPICES,Cilantro Leaf
+NULL,SPICES,Cinnamon
+NULL,SPICES,Cinnamon Sticks
+NULL,SPICES,Citric Acid
+NULL,SPICES,Cocoa
+NULL,SPICES,Cooking Bags
+NULL,SPICES,Coriander
+NULL,SPICES,Cream of Tarter
+NULL,SPICES,Crystalized Ginger
+NULL,SPICES,Cumin
+NULL,SPICES,Curry Powder
+NULL,SPICES,De Arbol Powder
+NULL,SPICES,Dill Seed
+NULL,SPICES,Dill Weed
+NULL,SPICES,Equal
+NULL,SPICES,Extracts
+NULL,SPICES,Fennel Seed
+NULL,SPICES,Fleur De Sel Salt
+NULL,SPICES,Garlic and Herb Seasoning
+NULL,SPICES,Garlic Cloves
+NULL,SPICES,Garlic Powder
+NULL,SPICES,Garlic Salt
+NULL,SPICES,Ginger
+NULL,SPICES,Granulated Garlic
+NULL,SPICES,Granulated Lemon Peel
+NULL,SPICES,Granulated Onion
+NULL,SPICES,Granulated Orange Peel
+NULL,SPICES,Granulated Roasted Garlic
+NULL,SPICES,Granulated Sea Salt
+NULL,SPICES,Granulated Sugar
+NULL,SPICES,Greek Seasoning
+NULL,SPICES,Ground Allspice
+NULL,SPICES,Ground Bay Leaves
+NULL,SPICES,Ground Cardamom
+NULL,SPICES,Ground Celery Seed
+NULL,SPICES,Ground Chipotle Chile
+NULL,SPICES,Ground Cloves
+NULL,SPICES,Ground Coriander Seed
+NULL,SPICES,Ground Cumin Seed
+NULL,SPICES,Ground Epazote Herb
+NULL,SPICES,Ground Fennel Seed
+NULL,SPICES,Ground Ginger
+NULL,SPICES,Ground Jalapeno Pepper
+NULL,SPICES,Ground Mustard
+NULL,SPICES,Ground Nutmeg
+NULL,SPICES,Ground Rosemary Leaf
+NULL,SPICES,Ground Thyme Leaf
+NULL,SPICES,Ground Turmeric
+NULL,SPICES,Gumbo File
+NULL,SPICES,Habanero Powder
+NULL,SPICES,Hickory
+NULL,SPICES,Italian Seasoning
+NULL,SPICES,Juniper Berries
+NULL,SPICES,Kosher Salt
+NULL,SPICES,Lavender Flowers
+NULL,SPICES,Lemon Extract
+NULL,SPICES,Lemon Grass
+NULL,SPICES,Lemon Peel
+NULL,SPICES,Marjoram Leaves
+NULL,SPICES,Minced Garlic
+NULL,SPICES,Minced Onion
+NULL,SPICES,Minced Onions
+NULL,SPICES,Minced Roasted Garlic
+NULL,SPICES,Mint Flakes
+NULL,SPICES,Molasses
+NULL,SPICES,Monosodium Glutamate
+NULL,SPICES,Mustard Powder
+NULL,SPICES,Mustard Seed
+NULL,SPICES,Natural Sweetener
+NULL,SPICES,Nutmeg
+NULL,SPICES,Nutmeg Grinding Kit
+NULL,SPICES,Old Bay Seasoning
+NULL,SPICES,Onion Powder
+NULL,SPICES,Onion Salt
+NULL,SPICES,Orange Peel
+NULL,SPICES,Oregano
+NULL,SPICES,Organic Flour
+NULL,SPICES,Organic Spices
+NULL,SPICES,Organic Sugar
+NULL,SPICES,Orris Root Powder
+NULL,SPICES,Paprika
+NULL,SPICES,Parsley
+NULL,SPICES,Pepper
+NULL,SPICES,Peppercorns
+NULL,SPICES,Pine Nuts
+NULL,SPICES,Poppy Seed
+NULL,SPICES,Powdered Lemon Peel
+NULL,SPICES,Powdered Orange Peel
+NULL,SPICES,Powdered Sugar
+NULL,SPICES,Red Pepper
+NULL,SPICES,Roasting Rub
+NULL,SPICES,Rosemary
+NULL,SPICES,Saffron
+NULL,SPICES,Sage
+NULL,SPICES,Sage Leaf
+NULL,SPICES,Salt
+NULL,SPICES,Salt Substitute
+NULL,SPICES,Savory
+NULL,SPICES,Savory Leaf
+NULL,SPICES,Sea Salt
+NULL,SPICES,Seasoning Mix
+NULL,SPICES,Sesame Seed
+NULL,SPICES,Smoked Sea Salt
+NULL,SPICES,Spearmint Leaves
+NULL,SPICES,Spices
+NULL,SPICES,Szechuan Pepper
+NULL,SPICES,Tahini
+NULL,SPICES,Tarragon Leaf
+NULL,SPICES,Tenderizer
+NULL,SPICES,Thyme
+NULL,SPICES,Toasted Onion
+NULL,SPICES,Vanilla Beans
+NULL,SPICES,Vanilla Extract
+NULL,SPICES,Vanilla Powder
+NULL,SPICES,Vanilla Sugar
+NULL,SPICES,Wasabi Powder
+NULL,SPICES,White Pepper
+NULL,SPICES,Whole Allspice
+NULL,SPICES,Whole Bay Leaves
+NULL,SPICES,Whole Cardamom
+NULL,SPICES,Whole Celery Seed
+NULL,SPICES,Whole Cloves
+NULL,SPICES,Whole Coriander Seed
+NULL,SPICES,Whole Cumin Seed
+NULL,SPICES,Whole Fennel Seed
+NULL,SPICES,Whole Nutmeg
+NULL,SPICES,Whole Peppercorns
+NULL,SPICES,Whole Rosemary Leaf
+NULL,SPICES,Whole Thyme Leaf
+NULL,SPICES,Zahtar
+
+
+

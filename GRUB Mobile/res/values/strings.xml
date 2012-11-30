@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Text used for Application and Activity Headers -->
+    <string name="appName">GRUB</string>
+    <string name="mainActivityName">My GRUB Activities</string>
+    <string name="catalogActivityName">Grocery Catalog</string>
+    <string name="pantryActivityName">My Pantry</string>
+    <string name="shoppingActivityName">My Shopping Lists</string>
+    <string name="mealsActivityName">My Meals</string>
+    
+    <!-- Text used for Grocery Catalog Activity Buttons -->
+    <string name="FilterBtnTxt">Filter</string>
+    <string name="SearchBtnTxt">Search</string>
+    <string name="AddToShoppingBtnTXT">To Shopping</string>
+    
+    
+</resources>
