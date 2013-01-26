@@ -13,8 +13,6 @@ import java.awt.image.BufferedImage;
 
 
 
-
-
 /**
  * This class implements an item that can be purchased from a grocery store.
  *

@@ -21,7 +21,7 @@ import com.mobettertech.grub.catalog.GroceryItem;
  * @author Joel C. Black
  *
  */
-public interface PantryManagerInterface
+public interface IPantryManager
 {
    /**
     * This method is used to add a new item to the Pantry.
