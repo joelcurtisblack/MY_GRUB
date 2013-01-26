@@ -15,11 +15,15 @@ import java.util.Collection;
 /**
  * This method implements the API provided by the Grocery Catalog.
  * 
- * @author Joel
+ * @author Joel Black
  *
  */
 public interface IGroceryCatalog 
 {
+	//++++++++++++++++++++++++++++++++
+	// Addition Methods
+	//++++++++++++++++++++++++++++++++
+	public void addItems(Collection<GroceryItem> aGroceryItem);
 	public void addItem(GroceryItem aGroceryItem);
 
 	//++++++++++++++++++++++++++++++++
