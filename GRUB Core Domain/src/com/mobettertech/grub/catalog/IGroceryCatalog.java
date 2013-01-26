@@ -27,6 +27,11 @@ public interface IGroceryCatalog
 	public void addItem(GroceryItem aGroceryItem);
 
 	//++++++++++++++++++++++++++++++++
+	// Edit Methods
+	//++++++++++++++++++++++++++++++++
+	public void editItem(GroceryItem aGroceryItem);
+	
+	//++++++++++++++++++++++++++++++++
 	// Retrieval Methods
 	//++++++++++++++++++++++++++++++++
 	public Collection<GroceryItem> getAllItems();
