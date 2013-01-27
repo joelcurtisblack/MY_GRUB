@@ -22,7 +22,19 @@ import java.util.Collection;
  */
 public class GroceryCatalog implements IGroceryCatalog
 {
+    
+    private IGroceryCatalogDao groceryCatalogDao = null;
+    
+    /**
+     * 
+     */
+    public GroceryCatalog()
+    {
+	super();
+    }
 
+
+ 
     /*
      * @see
      * com.mobettertech.grub.catalog.IGroceryCatalog#addItems(java.util.Collection
@@ -81,4 +93,21 @@ public class GroceryCatalog implements IGroceryCatalog
 	return null;
     }
 
+    /**
+     * @return the groceryCatalogDao
+     */
+    public IGroceryCatalogDao getGroceryCatalogDao()
+    {
+        return groceryCatalogDao;
+    }
+
+    /**
+     * @param aGroceryCatalogDao the groceryCatalogDao to set
+     */
+    public void setGroceryCatalogDao(IGroceryCatalogDao aGroceryCatalogDao)
+    {
+        groceryCatalogDao = aGroceryCatalogDao;
+    }
+    
+    
 }

@@ -27,12 +27,14 @@ public interface IGroceryCatalogDao
     //+++++++++++++++++++++++++++++++
 
     /**
+     * This method can be used to create a new GroceryItem in the database.
      * 
      * @param aGroceryItem
      */
     public void createItem(GroceryItem aGroceryItem);
     
     /**
+     * This method can be used to create new GroceryItems in the database.
      * 
      * @param aGroceryItemList
      */
@@ -74,22 +76,32 @@ public interface IGroceryCatalogDao
     //+++++++++++++++++++++++++++++++
     
     /**
+     * This method can be used to update a GroceryItem.
      * 
      * @param aGroceryItem
      */
     public void updateItem(GroceryItem aGroceryItem);
+    
+    /**
+     * This method can be used to update a list of GroceryItems.
+     * 
+     * @param aGroceryItem
+     */
+    public void updateItems(Collection<GroceryItem> aGroceryItemList);
     
     //+++++++++++++++++++++++++++++++
     // Delete Methods
     //+++++++++++++++++++++++++++++++
 
     /**
+     * This method can be used to delete a GroceryItem from the database.
      * 
      * @param aGroceryItem
      */
     public void deleteItem(GroceryItem aGroceryItem);
     
     /**
+     * This method can be used to delete a list of GroceryItems from the database.
      * 
      * @param aGroceryItemList
      */
