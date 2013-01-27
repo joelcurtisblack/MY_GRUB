@@ -65,6 +65,6 @@ public interface IPantryManager
     * @return
     * @throws PantryException
     */
-   public List<GroceryItem> reitrieveItems() throws PantryException;
+   public List<GroceryItem> reitrieveItemList() throws PantryException;
 
 }
