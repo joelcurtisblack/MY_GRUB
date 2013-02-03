@@ -11,7 +11,7 @@
 package com.mobettertech.grub.core.shopping;
 
 /**
- * This class implements the interface that defines the application 
+ * This class defines the interface that is the application 
  * programming interface of the grocery shopping list manager.
  *
  * @author Joel Black
