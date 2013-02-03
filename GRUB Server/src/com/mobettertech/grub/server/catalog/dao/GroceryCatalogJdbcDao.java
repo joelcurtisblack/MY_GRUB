@@ -22,8 +22,11 @@ import com.mobettertech.grub.core.catalog.ItemFilter;
  * @author Joel Black
  *
  */
-public class GrocerCatalogJdbcDao implements IGroceryCatalogDao
+public class GroceryCatalogJdbcDao implements IGroceryCatalogDao
 {
+    
+    private static final String GROCERY_CATALOG_TABLE = "grocery_items";
+    private static final String GROCERY_CATEGORIES_TABLE = "grocery_items";
     
     
 
