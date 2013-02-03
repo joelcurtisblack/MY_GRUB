@@ -7,11 +7,11 @@
  * This software is the confidential and proprietary information of
  * Mo Better Tech, Co.
  */
-package com.mobettertech.grub.pantry;
+package com.mobettertech.grub.core.pantry;
 
 import java.util.List;
 
-import com.mobettertech.grub.catalog.GroceryItem;
+import com.mobettertech.grub.core.catalog.GroceryItem;
 
 /**
  * This class implements the business interface of the Pantry SubSystem.

@@ -8,9 +8,15 @@
  * Mo Better Tech, Co.
  * 
  */
-package com.mobettertech.grub.catalog;
+package com.mobettertech.grub.server.catalog;
 
 import java.util.Collection;
+
+import com.mobettertech.grub.core.catalog.GroceryItem;
+import com.mobettertech.grub.core.catalog.IGroceryCatalog;
+import com.mobettertech.grub.core.catalog.IGroceryCatalogDao;
+import com.mobettertech.grub.core.catalog.ItemFilter;
+
 
 /**
  * This class implements a Grocery Catalog. The Grocery catalog

@@ -7,7 +7,7 @@
  * This software is the confidential and proprietary information of
  * Mo Better Tech, Co.
  */
-package com.mobettertech.grub.pantry;
+package com.mobettertech.grub.core.pantry;
 
 /**
  * This class implements an Exception used to indicate 

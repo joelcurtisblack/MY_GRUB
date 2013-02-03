@@ -8,7 +8,7 @@
  * Mo Better Tech, Co.
  * 
  */
-package com.mobettertech.grub.catalog;
+package com.mobettertech.grub.core.catalog;
 
 import java.util.Collection;
 
