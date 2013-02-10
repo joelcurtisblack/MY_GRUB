@@ -25,6 +25,14 @@ public class ItemFilter
     private String brandName = null;
     private UPC upcCode = null;
 
+    
+    /**
+     * constructor
+     */
+    public ItemFilter()
+    {
+    }
+    
     /**
      * constructor
      * 
@@ -47,13 +55,13 @@ public class ItemFilter
 
     public boolean isItemMatched(GroceryItem aGroceryItem)
     {
-	boolean matchResult = false;
+	boolean matchResult = true;
 	
 	if (aGroceryItem == null)
 	{
 	    return false;
 	}
-	if( !groceryCategory.equals(aGroceryItem.getCategory())  )
+	if( (groceryCategory != null) && (!groceryCategory.equals(aGroceryItem.getCategory()))  )
 	{
 	    return false;
 	}
