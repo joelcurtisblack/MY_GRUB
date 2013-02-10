@@ -26,9 +26,20 @@ public class UPC
 private String upc_code = null;
    private BufferedImage upcImage = null;
    
+
    
    /**
     * constructor 
+    * 
+    * @param aUpcCode - string representing the code of the UPC
+    */
+   public UPC(String aUpcCode)
+   {
+      this.upc_code = aUpcCode;
+   }
+   
+   /**
+    * constructor - includes an image of the Bar/QR code.
     * 
     * @param aUpcCode - string representing the code of the UPC
     * @param aUpcImage - a bitmap of the UPC bar code
