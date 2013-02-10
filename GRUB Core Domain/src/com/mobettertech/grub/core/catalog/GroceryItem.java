@@ -22,38 +22,64 @@ import java.awt.image.BufferedImage;
 public class GroceryItem
 {
    
+   private static String DEFAULT_ITEM_IMAGE_LOCATION = "resources/default/image.png";
+   
    private int itemId = 0;
-   private String categoryId = null;
+   private GroceryCategory category = null;
    private String genericItemName = null;
    private String specificItemName = null;
    private String brandName = null;
-   private UPC upcCode = null;
+   private UPC upcCode = null;   
    private BufferedImage itemImage = null;
+   
+
+   /**
+    * This class represents an item listed in the default grocery catalog.
+    * 
+    * @param aItemId Unique identifier of a grocery item
+    * @param aCategoryCategory Identifies grocery category the item belongs to
+    * @param aGenericItemName The generic name of an item
+    * @param aSpecificItemName The specific name of an item
+    * @param aBrandName The brand name of an item
+    * @param aUpcCode The UPC product code
+    */
+   public GroceryItem(int aItemId, GroceryCategory aCategory, String aGenericItemName,
+            String aSpecificItemName, String aBrandName, UPC aUpcCode)
+   {
+      this.itemId = aItemId;
+      this.category = aCategory;
+      this.genericItemName = aGenericItemName;
+      this.specificItemName = aSpecificItemName;
+      this.brandName = aBrandName;
+      this.upcCode = aUpcCode;
+   }
    
    
    /**
     * This class represents an item listed in the default grocery catalog.
     * 
     * @param aItemId Unique identifier of a grocery item
-    * @param aCategoryId Identifies grocery category the item belongs to
+    * @param aCategoryCategory Identifies grocery category the item belongs to
     * @param aGenericItemName The generic name of an item
     * @param aSpecificItemName The specific name of an item
     * @param aBrandName The brand name of an item
     * @param aUpcCode The UPC product code
     * @param aItemImage - an image of the item
     */
-   public GroceryItem(int aItemId, String aCategoryId, String aGenericItemName,
+   public GroceryItem(int aItemId, GroceryCategory aCategory, String aGenericItemName,
             String aSpecificItemName, String aBrandName, UPC aUpcCode,
             BufferedImage aItemImage)
    {
       this.itemId = aItemId;
-      this.categoryId = aCategoryId;
+      this.category = aCategory;
       this.genericItemName = aGenericItemName;
       this.specificItemName = aSpecificItemName;
       this.brandName = aBrandName;
       this.upcCode = aUpcCode;
       this.itemImage = aItemImage;
    }
+   
+   
    
    
    /**
@@ -65,11 +91,11 @@ public class GroceryItem
    }
    
    /**
-    * @return the categoryId
+    * @return the category
     */
-   public String getCategoryId()
+   public GroceryCategory getCategory()
    {
-      return this.categoryId;
+      return this.category;
    }
    
    
@@ -112,6 +138,100 @@ public class GroceryItem
    {
       return this.itemImage;
    }
+
+
+
+
+/*
+ * @see java.lang.Object#hashCode()
+ */
+@Override
+public int hashCode()
+{
+    final int prime = 31;
+    int result = 1;
+    result = prime * result + ((brandName == null) ? 0 : brandName.hashCode());
+    result = prime * result + ((category == null) ? 0 : category.hashCode());
+    result = prime * result
+	    + ((genericItemName == null) ? 0 : genericItemName.hashCode());
+    result = prime * result
+	    + ((specificItemName == null) ? 0 : specificItemName.hashCode());
+    result = prime * result + ((upcCode == null) ? 0 : upcCode.hashCode());
+    return result;
+}
+
+
+
+
+/*
+ * @see java.lang.Object#equals(java.lang.Object)
+ */
+@Override
+public boolean equals(Object obj)
+{
+    if (this == obj)
+    {
+	return true;
+    }
+    if (obj == null)
+    {
+	return false;
+    }
+    if (getClass() != obj.getClass())
+    {
+	return false;
+    }
+    GroceryItem other = (GroceryItem) obj;
+    if (brandName == null)
+    {
+	if (other.brandName != null)
+	{
+	    return false;
+	}
+    }
+    else if (!brandName.equals(other.brandName))
+    {
+	return false;
+    }
+    if (category != other.category)
+    {
+	return false;
+    }
+    if (genericItemName == null)
+    {
+	if (other.genericItemName != null)
+	{
+	    return false;
+	}
+    }
+    else if (!genericItemName.equals(other.genericItemName))
+    {
+	return false;
+    }
+    if (specificItemName == null)
+    {
+	if (other.specificItemName != null)
+	{
+	    return false;
+	}
+    }
+    else if (!specificItemName.equals(other.specificItemName))
+    {
+	return false;
+    }
+    if (upcCode == null)
+    {
+	if (other.upcCode != null)
+	{
+	    return false;
+	}
+    }
+    else if (!upcCode.equals(other.upcCode))
+    {
+	return false;
+    }
+    return true;
+}
    
    
    

@@ -16,24 +16,26 @@ import java.util.Collection;
  * This method implements the API provided by the Grocery Catalog.
  * 
  * @author Joel Black
- *
+ * 
  */
-public interface IGroceryCatalog 
+public interface IGroceryCatalog
 {
-	//++++++++++++++++++++++++++++++++
-	// Addition Methods
-	//++++++++++++++++++++++++++++++++
-	public void addItems(Collection<GroceryItem> aGroceryItem);
-	public void addItem(GroceryItem aGroceryItem);
+    // ++++++++++++++++++++++++++++++++
+    // Addition Methods
+    // ++++++++++++++++++++++++++++++++
+    public void addItems(Collection<GroceryItem> aGroceryItem);
 
-	//++++++++++++++++++++++++++++++++
-	// Edit Methods
-	//++++++++++++++++++++++++++++++++
-	public void editItem(GroceryItem aGroceryItem);
-	
-	//++++++++++++++++++++++++++++++++
-	// Retrieval Methods
-	//++++++++++++++++++++++++++++++++
-	public Collection<GroceryItem> getAllItems();
-	public Collection<GroceryItem> getItems( ItemFilter aItemFilter);
+    public void addItem(GroceryItem aGroceryItem);
+
+    // ++++++++++++++++++++++++++++++++
+    // Edit Methods
+    // ++++++++++++++++++++++++++++++++
+    public void editItem(GroceryItem aGroceryItem);
+
+    // ++++++++++++++++++++++++++++++++
+    // Retrieval Methods
+    // ++++++++++++++++++++++++++++++++
+    public Collection<GroceryItem> getAllItems();
+
+    public Collection<GroceryItem> getItems(ItemFilter aItemFilter);
 }

@@ -11,105 +11,167 @@
 package com.mobettertech.grub.core.catalog;
 
 /**
- * This class implements a Filter that defines the parameters
- * that should be used to identify GroceryItems specific grecery
- * items in the catalog.
+ * This class implements a Filter that defines the parameters that should be
+ * used to identify GroceryItems specific grecery items in the catalog.
  * 
  * @author Joel Black
- *
+ * 
  */
-public class ItemFilter 
+public class ItemFilter
 {
-	private int categoryID = 0;
-	private String genericName = null;
-	private String specificName = null;
-	private String brandName = null;
-	private UPC upcNumber = null;
+    private GroceryCategory groceryCategory = null;
+    private String genericName = null;
+    private String specificName = null;
+    private String brandName = null;
+    private UPC upcCode = null;
+
+    /**
+     * constructor
+     * 
+     * @param categoryID
+     * @param genericName
+     * @param specificName
+     * @param brandName
+     * @param upcCode
+     */
+    public ItemFilter(GroceryCategory aCategory, String aGenericName, String aSpecificName,
+	    String aBrandName, UPC aUpcNumber)
+    {
+	super();
+	this.groceryCategory = aCategory;
+	this.genericName = aGenericName;
+	this.specificName = aSpecificName;
+	this.brandName = aBrandName;
+	this.upcCode = aUpcNumber;
+    }
+
+    public boolean isItemMatched(GroceryItem aGroceryItem)
+    {
+	boolean matchResult = false;
 	
-	
-	
-	
-	
-	/**
-	 * constructor
-	 * 
-	 * @param categoryID
-	 * @param genericName
-	 * @param specificName
-	 * @param brandName
-	 * @param upcNumber
-	 */
-	public ItemFilter(int categoryID, String genericName, String specificName,
-			String brandName, UPC upcNumber) 
+	if (aGroceryItem == null)
 	{
-		super();
-		this.categoryID = categoryID;
-		this.genericName = genericName;
-		this.specificName = specificName;
-		this.brandName = brandName;
-		this.upcNumber = upcNumber;
+	    return false;
+	}
+	if( !groceryCategory.equals(aGroceryItem.getCategory())  )
+	{
+	    return false;
+	}
+	if( genericName != null )
+	{
+	    if(!genericName.equals(aGroceryItem.getGenericItemName()))
+	    {
+		return false;
+	    }	    
+	}
+	if ( specificName != null )
+	{
+	    if(!specificName.equals(aGroceryItem.getSpecificItemName()))
+	    {
+		return false;
+	    }	    
+	}
+	if ( brandName != null )
+	{
+	    if(!brandName.equals(aGroceryItem.getBrandName()))
+	    {
+		return false;
+	    }	    
+	}
+	if ( upcCode != null )
+	{
+	    if(!upcCode.equals(aGroceryItem.getUpcCode()))
+	    {
+		return false;
+	    }	    
 	}
 	
-	/**
-	 * @return the categoryID
-	 */
-	public int getCategoryID() 
-	{
-		return categoryID;
-	}
-	/**
-	 * @return the genericName
-	 */
-	public String getGenericName() 
-	{
-		return genericName;
-	}
-	/**
-	 * @return the specificName
-	 */
-	public String getSpecificName() {
-		return specificName;
-	}
-	/**
-	 * @return the brandName
-	 */
-	public String getBrandName() {
-		return brandName;
-	}
-	/**
-	 * @return the upcNumber
-	 */
-	public UPC getUpcNumber() {
-		return upcNumber;
-	}
-	/**
-	 * @param categoryID the categoryID to set
-	 */
-	public void setCategoryID(int categoryID) {
-		this.categoryID = categoryID;
-	}
-	/**
-	 * @param genericName the genericName to set
-	 */
-	public void setGenericName(String genericName) {
-		this.genericName = genericName;
-	}
-	/**
-	 * @param specificName the specificName to set
-	 */
-	public void setSpecificName(String specificName) {
-		this.specificName = specificName;
-	}
-	/**
-	 * @param brandName the brandName to set
-	 */
-	public void setBrandName(String brandName) {
-		this.brandName = brandName;
-	}
-	/**
-	 * @param upcNumber the upcNumber to set
-	 */
-	public void setUpcNumber(UPC upcNumber) {
-		this.upcNumber = upcNumber;
-	}
+	
+	
+	return matchResult;
+    }
+    
+    
+    /**
+     * @return the categoryID
+     */
+    public GroceryCategory getCategory()
+    {
+	return groceryCategory;
+    }
+
+    /**
+     * @return the genericName
+     */
+    public String getGenericName()
+    {
+	return genericName;
+    }
+
+    /**
+     * @return the specificName
+     */
+    public String getSpecificName()
+    {
+	return specificName;
+    }
+
+    /**
+     * @return the brandName
+     */
+    public String getBrandName()
+    {
+	return brandName;
+    }
+
+    /**
+     * @return the upcCode
+     */
+    public UPC getUpcCode()
+    {
+	return upcCode;
+    }
+
+    /**
+     * @param aCategory
+     */
+    public void setCategoryID(GroceryCategory aCategory)
+    {
+	this.groceryCategory = aCategory;
+    }
+
+    /**
+     * @param genericName
+     *            the genericName to set
+     */
+    public void setGenericName(String genericName)
+    {
+	this.genericName = genericName;
+    }
+
+    /**
+     * @param specificName
+     *            the specificName to set
+     */
+    public void setSpecificName(String specificName)
+    {
+	this.specificName = specificName;
+    }
+
+    /**
+     * @param brandName
+     *            the brandName to set
+     */
+    public void setBrandName(String brandName)
+    {
+	this.brandName = brandName;
+    }
+
+    /**
+     * @param upcCode
+     */
+    public void setUpcCode(UPC upcCode)
+    {
+	this.upcCode = upcCode;
+    }
 }

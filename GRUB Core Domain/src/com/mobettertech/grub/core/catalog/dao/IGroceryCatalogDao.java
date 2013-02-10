@@ -33,15 +33,17 @@ public interface IGroceryCatalogDao
      * This method can be used to create a new GroceryItem in the database.
      * 
      * @param aGroceryItem
+     * @throws GroceryCatalogDataAccessException
      */
-    public void createItem(GroceryItem aGroceryItem);
+    public void createItem(GroceryItem aGroceryItem) throws GroceryCatalogDataAccessException;
     
     /**
      * This method can be used to create new GroceryItems in the database.
      * 
-     * @param aGroceryItemList
+     * @param aGroceryItemCollection
+     * @throws GroceryCatalogDataAccessException
      */
-    public void createItems(Collection<GroceryItem> aGroceryItemList);
+    public void createItems(Collection<GroceryItem> aGroceryItemCollection) throws GroceryCatalogDataAccessException;
     
     //+++++++++++++++++++++++++++++++
     // Retrieval Methods
@@ -51,27 +53,21 @@ public interface IGroceryCatalogDao
      * This method is used to retrieve all of the existing
      * GroceryItems from the catalog.
      * 
-     * @return
+     * @return a Collection of GroceryItems
+     * @throws GroceryCatalogDataAccessException
      */
-    public Collection<GroceryItem> retrieveAllItems();
+    public Collection<GroceryItem> retrieveAllItems() throws GroceryCatalogDataAccessException;
     
     /**
-     * This method is used to retrieve a specific GroceryItem 
-     * from the catalog.
+     * This method is used to retrieve GroceryItems from the catalog that match the 
+     * ItemFilter passed in. If the filter is completely filled in the only 
+     * one item will be found that matches
      * 
-     * @param aItemFIlter a filter used to identify a GroceryItem
-     * @return
+     * @param aItemFIlter identifying specific characteristics to match on 
+     * @return a Collection of matching GroceryItems
+     * @throws GroceryCatalogDataAccessException
      */
-    public GroceryItem retrieveItems(ItemFilter aItemFIlter);
-
-    /**
-     * This method is used to retrieve a specific GroceryItem 
-     * from the catalog.
-     * 
-     * @param aGroceryItem a specific Grocery Item
-     * @return
-     */
-    public GroceryItem retrieveItem(GroceryItem aGroceryItem);
+    public GroceryItem retrieveItems(ItemFilter aItemFIlter) throws GroceryCatalogDataAccessException;
 
     
     //+++++++++++++++++++++++++++++++
@@ -82,15 +78,17 @@ public interface IGroceryCatalogDao
      * This method can be used to update a GroceryItem.
      * 
      * @param aGroceryItem
+     * @throws GroceryCatalogDataAccessException
      */
-    public void updateItem(GroceryItem aGroceryItem);
+    public void updateItem(GroceryItem aGroceryItem) throws GroceryCatalogDataAccessException;
     
     /**
      * This method can be used to update a list of GroceryItems.
      * 
-     * @param aGroceryItem
+     * @param aGroceryItemList
+     * @throws GroceryCatalogDataAccessException
      */
-    public void updateItems(Collection<GroceryItem> aGroceryItemList);
+    public void updateItems(Collection<GroceryItem> aGroceryItemList) throws GroceryCatalogDataAccessException;
     
     //+++++++++++++++++++++++++++++++
     // Delete Methods
@@ -100,13 +98,15 @@ public interface IGroceryCatalogDao
      * This method can be used to delete a GroceryItem from the database.
      * 
      * @param aGroceryItem
+     * @throws GroceryCatalogDataAccessException
      */
-    public void deleteItem(GroceryItem aGroceryItem);
+    public void deleteItem(GroceryItem aGroceryItem) throws GroceryCatalogDataAccessException;
     
     /**
      * This method can be used to delete a list of GroceryItems from the database.
      * 
      * @param aGroceryItemList
+     * @throws GroceryCatalogDataAccessException
      */
-    public void deleteItems(Collection<GroceryItem> aGroceryItemList);
+    public void deleteItems(Collection<GroceryItem> aGroceryItemList) throws GroceryCatalogDataAccessException;
 }
