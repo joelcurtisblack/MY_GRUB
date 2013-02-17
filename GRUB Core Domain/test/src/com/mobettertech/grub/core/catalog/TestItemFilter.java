@@ -47,7 +47,7 @@ public class TestItemFilter
     }
 
     /**
-     * Test method for {@link com.mobettertech.grub.core.catalog.ItemFilter#isItemMatched(com.mobettertech.grub.core.catalog.GroceryItem)}.
+     * Test method for {@link com.mobettertech.grub.core.catalog.ItemFilter#isItemMatched(com.mobettertech.grub.core.catalog.TestGroceryItem)}.
      */
     @Test
     public void testIsItemMatched()

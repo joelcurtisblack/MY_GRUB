@@ -11,7 +11,7 @@ package com.mobettertech.grub.core.pantry;
 
 import java.util.List;
 
-import com.mobettertech.grub.core.catalog.GroceryItem;
+import com.mobettertech.grub.core.catalog.TestGroceryItem;
 
 /**
  * This class implements the business interface of the Pantry SubSystem.
@@ -29,14 +29,14 @@ public interface IPantryManager
     * @param aItem
     * @throws PantryException
     */
-   public void addItem(GroceryItem aItem) throws PantryException;
+   public void addItem(TestGroceryItem aItem) throws PantryException;
 
    /**
     * 
     * @param aItemId
     * @throws PantryException
     */
-   public void removeItem(GroceryItem aItemId) throws PantryException;
+   public void removeItem(TestGroceryItem aItemId) throws PantryException;
 
    /**
     * This method is used to update the information
@@ -57,7 +57,7 @@ public interface IPantryManager
     * @return
     * @throws PantryException
     */
-   public GroceryItem retrieveItem() throws PantryException;
+   public TestGroceryItem retrieveItem() throws PantryException;
    
    /**
     * This method is used to retrieve items from the Pantry.
@@ -65,6 +65,6 @@ public interface IPantryManager
     * @return
     * @throws PantryException
     */
-   public List<GroceryItem> reitrieveItemList() throws PantryException;
+   public List<TestGroceryItem> reitrieveItemList() throws PantryException;
 
 }

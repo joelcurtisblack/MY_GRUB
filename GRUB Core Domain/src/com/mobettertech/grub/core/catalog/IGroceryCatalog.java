@@ -23,19 +23,19 @@ public interface IGroceryCatalog
     // ++++++++++++++++++++++++++++++++
     // Addition Methods
     // ++++++++++++++++++++++++++++++++
-    public void addItems(Collection<GroceryItem> aGroceryItem);
+    public void addItems(Collection<TestGroceryItem> aGroceryItem);
 
-    public void addItem(GroceryItem aGroceryItem);
+    public void addItem(TestGroceryItem aGroceryItem);
 
     // ++++++++++++++++++++++++++++++++
     // Edit Methods
     // ++++++++++++++++++++++++++++++++
-    public void editItem(GroceryItem aGroceryItem);
+    public void editItem(TestGroceryItem aGroceryItem);
 
     // ++++++++++++++++++++++++++++++++
     // Retrieval Methods
     // ++++++++++++++++++++++++++++++++
-    public Collection<GroceryItem> getAllItems();
+    public Collection<TestGroceryItem> getAllItems();
 
-    public Collection<GroceryItem> getItems(ItemFilter aItemFilter);
+    public Collection<TestGroceryItem> getItems(ItemFilter aItemFilter);
 }
