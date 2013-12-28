@@ -14,7 +14,7 @@ package com.mobettertech.grub.core.catalog;
  * This class implements an Exception used to indicate a problem occurred in 
  * one of the GroceryCatalog components. 
  *
- * @author Joel Black
+ * @author Joel C. Black
  *
  */
 public class GroceryCatalogExeption extends Exception

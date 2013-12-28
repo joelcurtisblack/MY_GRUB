@@ -12,7 +12,7 @@ package com.mobettertech.grub.core.catalog.dao;
 
 import java.util.Collection;
 
-import com.mobettertech.grub.core.catalog.TestGroceryItem;
+import com.mobettertech.grub.core.catalog.dto.GroceryItem;
 import com.mobettertech.grub.core.catalog.ItemFilter;
 
 
@@ -20,7 +20,7 @@ import com.mobettertech.grub.core.catalog.ItemFilter;
  * This class implements an interface that describes the methods available
  * for accessing the GroceryCatalog data.
  *
- * @author Joel Black
+ * @author Joel C. Black
  *
  */
 public interface IGroceryCatalogDao
@@ -35,7 +35,7 @@ public interface IGroceryCatalogDao
      * @param aGroceryItem
      * @throws GroceryCatalogDataAccessException
      */
-    public void createItem(TestGroceryItem aGroceryItem) throws GroceryCatalogDataAccessException;
+    public void createItem(GroceryItem aGroceryItem) throws GroceryCatalogDataAccessException;
     
     /**
      * This method can be used to create new GroceryItems in the database.
@@ -43,7 +43,7 @@ public interface IGroceryCatalogDao
      * @param aGroceryItemCollection
      * @throws GroceryCatalogDataAccessException
      */
-    public void createItems(Collection<TestGroceryItem> aGroceryItemCollection) throws GroceryCatalogDataAccessException;
+    public void createItems(Collection<GroceryItem> aGroceryItemCollection) throws GroceryCatalogDataAccessException;
     
     //+++++++++++++++++++++++++++++++
     // Retrieval Methods
@@ -56,18 +56,18 @@ public interface IGroceryCatalogDao
      * @return a Collection of GroceryItems
      * @throws GroceryCatalogDataAccessException
      */
-    public Collection<TestGroceryItem> retrieveAllItems() throws GroceryCatalogDataAccessException;
+    public Collection<GroceryItem> retrieveAllItems() throws GroceryCatalogDataAccessException;
     
     /**
      * This method is used to retrieve GroceryItems from the catalog that match the 
      * ItemFilter passed in. If the filter is completely filled in the only 
      * one item will be found that matches
      * 
-     * @param aItemFIlter identifying specific characteristics to match on 
+     * @param aItemFilter identifying specific characteristics to match on 
      * @return a Collection of matching GroceryItems
      * @throws GroceryCatalogDataAccessException
      */
-    public TestGroceryItem retrieveItems(ItemFilter aItemFIlter) throws GroceryCatalogDataAccessException;
+    public GroceryItem retrieveItems(ItemFilter aItemFilter) throws GroceryCatalogDataAccessException;
 
     
     //+++++++++++++++++++++++++++++++
@@ -80,7 +80,7 @@ public interface IGroceryCatalogDao
      * @param aGroceryItem
      * @throws GroceryCatalogDataAccessException
      */
-    public void updateItem(TestGroceryItem aGroceryItem) throws GroceryCatalogDataAccessException;
+    public void updateItem(GroceryItem aGroceryItem) throws GroceryCatalogDataAccessException;
     
     /**
      * This method can be used to update a list of GroceryItems.
@@ -88,7 +88,7 @@ public interface IGroceryCatalogDao
      * @param aGroceryItemList
      * @throws GroceryCatalogDataAccessException
      */
-    public void updateItems(Collection<TestGroceryItem> aGroceryItemList) throws GroceryCatalogDataAccessException;
+    public void updateItems(Collection<GroceryItem> aGroceryItemList) throws GroceryCatalogDataAccessException;
     
     //+++++++++++++++++++++++++++++++
     // Delete Methods
@@ -100,7 +100,7 @@ public interface IGroceryCatalogDao
      * @param aGroceryItem
      * @throws GroceryCatalogDataAccessException
      */
-    public void deleteItem(TestGroceryItem aGroceryItem) throws GroceryCatalogDataAccessException;
+    public void deleteItem(GroceryItem aGroceryItem) throws GroceryCatalogDataAccessException;
     
     /**
      * This method can be used to delete a list of GroceryItems from the database.
@@ -108,5 +108,5 @@ public interface IGroceryCatalogDao
      * @param aGroceryItemList
      * @throws GroceryCatalogDataAccessException
      */
-    public void deleteItems(Collection<TestGroceryItem> aGroceryItemList) throws GroceryCatalogDataAccessException;
+    public void deleteItems(Collection<GroceryItem> aGroceryItemList) throws GroceryCatalogDataAccessException;
 }

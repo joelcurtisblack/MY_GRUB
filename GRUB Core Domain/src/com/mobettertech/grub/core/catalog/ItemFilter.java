@@ -10,11 +10,13 @@
  */
 package com.mobettertech.grub.core.catalog;
 
+import com.mobettertech.grub.core.catalog.dto.GroceryItem;
+
 /**
  * This class implements a Filter that defines the parameters that should be
- * used to identify GroceryItems specific grecery items in the catalog.
+ * used to identify specific GroceryItems in the catalog.
  * 
- * @author Joel Black
+ * @author Joel C. Black
  * 
  */
 public class ItemFilter

@@ -11,9 +11,9 @@
 package com.mobettertech.grub.core.catalog;
 
 /**
- * This class implements
+ * This class implements an enumeration of the various Grocery catalog categories.
  *
- * @author Joel Black
+ * @author Joel C. Black
  *
  */
 public enum GroceryCategory
@@ -53,7 +53,7 @@ public enum GroceryCategory
      */
     private GroceryCategory(int aId)
     {
-	id = aId;
+    	id = aId;
     }
   
     
@@ -64,7 +64,7 @@ public enum GroceryCategory
      */
     public int getId()
     {
-	return id;
+    	return id;
     }
         
     

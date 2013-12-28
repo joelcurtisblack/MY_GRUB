@@ -19,7 +19,7 @@ import org.junit.Test;
 /**
  * This class implements
  *
- * @author Joel Black
+ * @author Joel C. Black
  *
  */
 public class TestGroceryItem
@@ -42,12 +42,12 @@ public class TestGroceryItem
     }
 
     /**
-     * Test method for {@link com.mobettertech.grub.core.catalog.GroceryItem#equals(java.lang.Object)}.
+     * Test method for {@link com.mobettertech.grub.core.catalog.dto.GroceryItem#equals(java.lang.Object)}.
      */
     @Test
     public void testEqualsObject()
     {
-	fail("Not yet implemented");
+    	fail("Not yet implemented");
     }
 
 }

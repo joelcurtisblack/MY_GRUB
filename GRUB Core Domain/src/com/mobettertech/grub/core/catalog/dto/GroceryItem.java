@@ -7,14 +7,17 @@
  * This software is the confidential and proprietary information of
  * Mo Better Tech, Co.
  */
-package com.mobettertech.grub.core.catalog;
+package com.mobettertech.grub.core.catalog.dto;
 
 import java.awt.image.BufferedImage;
+
+import com.mobettertech.grub.core.catalog.GroceryCategory;
+import com.mobettertech.grub.core.catalog.UPC;
 
 
 
 /**
- * This class implements an item that can be purchased from a grocery store.
+ * This class represents an item that can be purchased from a grocery store.
  *
  * @author Joel C. Black
  *

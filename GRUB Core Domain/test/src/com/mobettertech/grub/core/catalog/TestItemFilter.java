@@ -18,6 +18,8 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.mobettertech.grub.core.catalog.dto.GroceryItem;
+
 /**
  * This class implements
  *

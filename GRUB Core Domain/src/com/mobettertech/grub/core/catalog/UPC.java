@@ -16,15 +16,15 @@ import java.awt.image.BufferedImage;
  * This class implements an Universal Product Code. This is a unique code
  * assigned to products.
  *
- * @author Joel
+ * @author Joel C. Black
  *
  */
 public class UPC
 {
 
 
-private String upc_code = null;
-   private BufferedImage upcImage = null;
+	private String upc_code = null;
+	private BufferedImage upcImage = null;
    
 
    
