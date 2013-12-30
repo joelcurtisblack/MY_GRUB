@@ -107,20 +107,20 @@ INSERT INTO `GROCERY_CATEGORIES` VALUES (NULL,'Baby');
 INSERT INTO `GROCERY_CATEGORIES` VALUES (NULL,'Pets');
 
 -- -----------------------------------------------------------------
--- Table `MY_GRUB`.`GROCERY_ITEMS`
+-- Table `MY_GRUB`.`GROCERY_CATALOG`
 -- -----------------------------------------------------------------
 
--- DROP TABLE IF EXISTS `MY_GRUB`.`GROCERY_ITEMS`;
+-- DROP TABLE IF EXISTS `MY_GRUB`.`GROCERY_CATALOG`;
 
-CREATE  TABLE IF NOT EXISTS `MY_GRUB`.`GROCERY_ITEMS` (
+CREATE  TABLE IF NOT EXISTS `MY_GRUB`.`GROCERY_CATALOG` (
   `_ID` INT NOT NULL AUTO_INCREMENT ,
   `categoryID` INT NOT NULL ,
   `genericName` VARCHAR(45) NOT NULL ,
   `specificName` VARCHAR(45) NULL ,
   `brandName` VARCHAR(45) NULL ,
   `upcNumber` INT NULL DEFAULT 0 ,
-  `barcodeImage` VARCHAR(256) NULL ,
-  `itemImage` VARCHAR(256) NULL ,
+  `barcodeImage` MEDIUMBLOB NULL ,
+  `itemImage` MEDIUMBLOB NULL ,
   PRIMARY KEY (`_ID`) ,
   INDEX `categoryID` (`categoryID` ASC) ,
   FOREIGN KEY (`categoryID` )
@@ -132,72 +132,72 @@ ENGINE = InnoDB;
 
 LOAD DATA
   INFILE 'C:/users/Joel/workspace/mobetter/GRUB/database/data/fresh_fruit.csv'
-  INTO TABLE GROCERY_ITEMS
+  INTO TABLE GROCERY_CATALOG
   FIELDS TERMINATED BY ','
   LINES TERMINATED BY '\r\n' (categoryID,genericName,specificName);
 
 
 LOAD DATA
   INFILE 'C:/users/Joel/workspace/mobetter/GRUB/database/data/fresh_produce.csv'
-  INTO TABLE GROCERY_ITEMS
+  INTO TABLE GROCERY_CATALOG
   FIELDS TERMINATED BY ','
   LINES TERMINATED BY '\r\n' (categoryID,genericName,specificName);
 
 LOAD DATA
   INFILE 'C:/users/Joel/workspace/mobetter/GRUB/database/data/spices.csv'
-  INTO TABLE GROCERY_ITEMS
+  INTO TABLE GROCERY_CATALOG
   FIELDS TERMINATED BY ','
   LINES TERMINATED BY '\r\n' (categoryID,genericName,specificName);
 
 LOAD DATA
   INFILE 'C:/users/Joel/workspace/mobetter/GRUB/database/data/baking.csv'
-  INTO TABLE GROCERY_ITEMS
+  INTO TABLE GROCERY_CATALOG
   FIELDS TERMINATED BY ','
   LINES TERMINATED BY '\r\n' (categoryID,genericName,specificName);
 
 LOAD DATA
   INFILE 'C:/users/Joel/workspace/mobetter/GRUB/database/data/canned_goods.csv'
-  INTO TABLE GROCERY_ITEMS
+  INTO TABLE GROCERY_CATALOG
   FIELDS TERMINATED BY ','
   LINES TERMINATED BY '\r\n' (categoryID,genericName,specificName);
 
 LOAD DATA
   INFILE 'C:/users/Joel/workspace/mobetter/GRUB/database/data/breakfast_foods.csv'
-  INTO TABLE GROCERY_ITEMS
+  INTO TABLE GROCERY_CATALOG
   FIELDS TERMINATED BY ','
   LINES TERMINATED BY '\r\n' (categoryID,genericName,specificName);
 
 LOAD DATA
   INFILE 'C:/users/Joel/workspace/mobetter/GRUB/database/data/beverages.csv'
-  INTO TABLE GROCERY_ITEMS
+  INTO TABLE GROCERY_CATALOG
   FIELDS TERMINATED BY ','
   LINES TERMINATED BY '\r\n' (categoryID,genericName,specificName);
 
 LOAD DATA
   INFILE 'C:/users/Joel/workspace/mobetter/GRUB/database/data/dairy.csv'
-  INTO TABLE GROCERY_ITEMS
+  INTO TABLE GROCERY_CATALOG
   FIELDS TERMINATED BY ','
   LINES TERMINATED BY '\r\n' (categoryID,genericName,specificName);
 
 LOAD DATA
   INFILE 'C:/users/Joel/workspace/mobetter/GRUB/database/data/condiments.csv'
-  INTO TABLE GROCERY_ITEMS
+  INTO TABLE GROCERY_CATALOG
   FIELDS TERMINATED BY ','
   LINES TERMINATED BY '\r\n' (categoryID,genericName,specificName);
 
 LOAD DATA
   INFILE 'C:/users/Joel/workspace/mobetter/GRUB/database/data/snacks.csv'
-  INTO TABLE GROCERY_ITEMS
+  INTO TABLE GROCERY_CATALOG
   FIELDS TERMINATED BY ','
   LINES TERMINATED BY '\r\n' (categoryID,genericName,specificName);
 
 LOAD DATA
   INFILE 'C:/users/Joel/workspace/mobetter/GRUB/database/data/packaged_foods.csv'
-  INTO TABLE GROCERY_ITEMS
+  INTO TABLE GROCERY_CATALOG
   FIELDS TERMINATED BY ','
   LINES TERMINATED BY '\r\n' (categoryID,genericName,specificName);
 
-Update MY_GRUB.GROCERY_ITEMS
+Update MY_GRUB.GROCERY_CATALOG
   SET specificName=NULL
   WHERE specificName='NULL' OR specificName='';
 
@@ -209,7 +209,7 @@ Update MY_GRUB.GROCERY_ITEMS
 -- DROP VIEW IF EXISTS `MY_GRUB`.`GENERIC_GROCERY_TYPES`;
 
 CREATE  VIEW GENERIC_GROCERY_TYPES AS
-  SELECT DISTINCT genericName FROM `MY_GRUB`.`GROCERY_ITEMS`;
+  SELECT DISTINCT genericName FROM `MY_GRUB`.`GROCERY_CATALOG`;
 
 
 -- -----------------------------------------------------
@@ -231,7 +231,7 @@ CREATE  TABLE IF NOT EXISTS `MY_GRUB`.`PANTRY_ITEMS` (
   INDEX `groceryItemID` (`groceryItemID` ASC) ,
   INDEX `containerSizeID` (`containerSizeID` ASC) ,
   FOREIGN KEY (`groceryItemID`)
-    REFERENCES `MY_GRUB`.`GROCERY_ITEMS` (`_ID` )
+    REFERENCES `MY_GRUB`.`GROCERY_CATALOG` (`_ID` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   FOREIGN KEY (`groceryStoreID`)
@@ -285,7 +285,7 @@ CREATE  TABLE IF NOT EXISTS `MY_GRUB`.`SHOPPING_LIST_ITEMS` (
   INDEX `shoppingListID` (`shoppingListID` ASC) ,
   INDEX `containerSizeID` (`containerSizeID` ASC) ,
   FOREIGN KEY (`groceryItemID` )
-    REFERENCES `MY_GRUB`.`GROCERY_ITEMS` (`_ID` )
+    REFERENCES `MY_GRUB`.`GROCERY_CATALOG` (`_ID` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   FOREIGN KEY (`shoppingListID` )
