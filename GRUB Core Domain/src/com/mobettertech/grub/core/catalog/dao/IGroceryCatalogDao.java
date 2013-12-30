@@ -30,7 +30,7 @@ public interface IGroceryCatalogDao
     //+++++++++++++++++++++++++++++++
 
     /**
-     * This method can be used to create a new GroceryItem in the database.
+     * This method is used to create a new GroceryItem in the database.
      * 
      * @param aGroceryItem
      * @throws GroceryCatalogDataAccessException
@@ -38,7 +38,7 @@ public interface IGroceryCatalogDao
     public void createItem(GroceryItem aGroceryItem) throws GroceryCatalogDataAccessException;
     
     /**
-     * This method can be used to create new GroceryItems in the database.
+     * This method is used to create more than one GroceryItems in the database.
      * 
      * @param aGroceryItemCollection
      * @throws GroceryCatalogDataAccessException
@@ -75,7 +75,7 @@ public interface IGroceryCatalogDao
     //+++++++++++++++++++++++++++++++
     
     /**
-     * This method can be used to update a GroceryItem.
+     * This method is used to update a GroceryItem.
      * 
      * @param aGroceryItem
      * @throws GroceryCatalogDataAccessException
@@ -83,7 +83,7 @@ public interface IGroceryCatalogDao
     public void updateItem(GroceryItem aGroceryItem) throws GroceryCatalogDataAccessException;
     
     /**
-     * This method can be used to update a list of GroceryItems.
+     * This method is used to update a list of GroceryItems.
      * 
      * @param aGroceryItemList
      * @throws GroceryCatalogDataAccessException
@@ -95,7 +95,7 @@ public interface IGroceryCatalogDao
     //+++++++++++++++++++++++++++++++
 
     /**
-     * This method can be used to delete a GroceryItem from the database.
+     * This method is used to delete a GroceryItem from the database.
      * 
      * @param aGroceryItem
      * @throws GroceryCatalogDataAccessException
@@ -103,7 +103,7 @@ public interface IGroceryCatalogDao
     public void deleteItem(GroceryItem aGroceryItem) throws GroceryCatalogDataAccessException;
     
     /**
-     * This method can be used to delete a list of GroceryItems from the database.
+     * This method is used to delete a list of GroceryItems from the database.
      * 
      * @param aGroceryItemList
      * @throws GroceryCatalogDataAccessException
