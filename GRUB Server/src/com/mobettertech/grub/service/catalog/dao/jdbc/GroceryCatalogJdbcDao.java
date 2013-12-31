@@ -11,6 +11,7 @@
 package com.mobettertech.grub.service.catalog.dao.jdbc;
 
 import java.util.Collection;
+import java.util.List;
 
 import com.mobettertech.grub.service.catalog.dao.GroceryCatalogColumns;
 import com.mobettertech.grub.service.catalog.dao.GroceryCatalogDataAccessException;
@@ -30,28 +31,24 @@ public class GroceryCatalogJdbcDao extends JdbcDaoSupport implements IGroceryCat
 	
 	
 	@Override
-	public void createItem(GroceryItem aGroceryItem) throws GroceryCatalogDataAccessException 
-	{
-	      List<FlightLegBooking> bookings = (List<FlightLegBooking>) this.getJdbcTemplate().query(
-	              new GetByFlightLegIdPreparedStatementCreator( aFlightLegId,
-	                    aAsOfDate ), new FlightLegBookingExtractor() );
-	        return bookings;
-		
-	}
-
-	@Override
-	public void createItems(Collection<GroceryItem> aGroceryItemCollection) throws GroceryCatalogDataAccessException 
+	public void insertGroceryItem(GroceryItem aGroceryItem) throws GroceryCatalogDataAccessException 
 	{
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public Collection<GroceryItem> retrieveAllItems() throws GroceryCatalogDataAccessException 
+	public void insertGroceryItems(Collection<GroceryItem> aGroceryItemCollection) throws GroceryCatalogDataAccessException 
+	{
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Collection<GroceryItem> retrieveAllGroceryItems() throws GroceryCatalogDataAccessException 
 	{
 	      List<GroceryItem> bookings = (List<GroceryItem>) this.getJdbcTemplate().query(
-	              new GetByFlightLegIdPreparedStatementCreator( aFlightLegId,
-	                    aAsOfDate ), new FlightLegBookingExtractor() );
+	              new RetrieveAllItemsPreparedStatementCreator( ), new FlightLegBookingExtractor() );
 	        return bookings;
 	}
 
@@ -63,31 +60,62 @@ public class GroceryCatalogJdbcDao extends JdbcDaoSupport implements IGroceryCat
 	}
 
 	@Override
-	public void updateItem(GroceryItem aGroceryItem) throws GroceryCatalogDataAccessException 
+	public void updateGroceryItem(GroceryItem aGroceryItem) throws GroceryCatalogDataAccessException 
 	{
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void updateItems(Collection<GroceryItem> aGroceryItemList) throws GroceryCatalogDataAccessException 
+	public void updateGroceryItems(Collection<GroceryItem> aGroceryItemList) throws GroceryCatalogDataAccessException 
 	{
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void deleteItem(GroceryItem aGroceryItem) throws GroceryCatalogDataAccessException 
+	public void deleteGroceryItem(GroceryItem aGroceryItem) throws GroceryCatalogDataAccessException 
 	{
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void deleteItems(Collection<GroceryItem> aGroceryItemList) throws GroceryCatalogDataAccessException 
+	public void deleteGroceryItems(Collection<GroceryItem> aGroceryItemList) throws GroceryCatalogDataAccessException 
 	{
 		// TODO Auto-generated method stub
 		
 	}
+	
+	private class isertItemPreparedStatementCreator implements PreparedStatementCreator
+	{
+	}
+	
+	private class isertItemsPreparedStatementCreator implements PreparedStatementCreator
+	{
+	}
+	
+	private class RetrieveItemsPreparedStatementCreator implements PreparedStatementCreator
+	{
+	}
 
+	private class RetrieveAllItemsPreparedStatementCreator implements PreparedStatementCreator
+	{
+	}
+
+	private class UpdateItemPreparedStatementCreator implements PreparedStatementCreator
+	{
+	}
+	
+	private class UpdateItemsPreparedStatementCreator implements PreparedStatementCreator
+	{
+	}
+
+	private class DeleteItemPreparedStatementCreator implements PreparedStatementCreator
+	{
+	}
+
+	private class DeleteItemsPreparedStatementCreator implements PreparedStatementCreator
+	{
+	}
 }
