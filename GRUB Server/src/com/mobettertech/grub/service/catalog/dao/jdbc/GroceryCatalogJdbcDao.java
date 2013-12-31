@@ -13,12 +13,21 @@ package com.mobettertech.grub.service.catalog.dao.jdbc;
 import java.util.Collection;
 import java.util.List;
 
+import org.springframework.jdbc.core.PreparedStatementCreator;
+import org.springframework.jdbc.core.support.JdbcDaoSupport;
+
 import com.mobettertech.grub.service.catalog.dao.GroceryCatalogColumns;
 import com.mobettertech.grub.service.catalog.dao.GroceryCatalogDataAccessException;
 import com.mobettertech.grub.service.catalog.dao.IGroceryCatalogDao;
 import com.mobettertech.grub.core.catalog.ItemFilter;
 import com.mobettertech.grub.core.catalog.dto.GroceryItem;
 
+/**
+ * This class implements a JDBC based DAO for the Grocery Catalog database.
+ * 
+ * @author Joel C. Black
+ *
+ */
 public class GroceryCatalogJdbcDao extends JdbcDaoSupport implements IGroceryCatalogDao
 {
 	
