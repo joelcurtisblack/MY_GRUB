@@ -18,7 +18,7 @@ import com.mobettertech.grub.service.catalog.dao.IGroceryCatalogDao;
 import com.mobettertech.grub.core.catalog.ItemFilter;
 import com.mobettertech.grub.core.catalog.dto.GroceryItem;
 
-public class GroceryCatalogJdbcDao implements  IGroceryCatalogDao
+public class GroceryCatalogJdbcDao extends JdbcDaoSupport implements IGroceryCatalogDao
 {
 	
 
