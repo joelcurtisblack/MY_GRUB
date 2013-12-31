@@ -12,7 +12,7 @@ package com.mobettertech.grub.core.catalog;
 
 import java.util.Collection;
 
-import com.mobettertech.grub.core.catalog.dto.GroceryItem;
+import com.mobettertech.grub.core.catalog.model.GroceryItem;
 
 /**
  * This interface defines the API provided by the Grocery Catalog.

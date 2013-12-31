@@ -10,7 +10,7 @@
  */
 package com.mobettertech.grub.core.catalog;
 
-import com.mobettertech.grub.core.catalog.dto.GroceryItem;
+import com.mobettertech.grub.core.catalog.model.GroceryItem;
 
 /**
  * This class implements a Filter that defines the parameters that should be

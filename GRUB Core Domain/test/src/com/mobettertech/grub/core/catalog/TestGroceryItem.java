@@ -42,7 +42,7 @@ public class TestGroceryItem
     }
 
     /**
-     * Test method for {@link com.mobettertech.grub.core.catalog.dto.GroceryItem#equals(java.lang.Object)}.
+     * Test method for {@link com.mobettertech.grub.core.catalog.model.GroceryItem#equals(java.lang.Object)}.
      */
     @Test
     public void testEqualsObject()

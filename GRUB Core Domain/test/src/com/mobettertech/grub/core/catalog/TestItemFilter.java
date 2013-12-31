@@ -18,7 +18,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.mobettertech.grub.core.catalog.dto.GroceryItem;
+import com.mobettertech.grub.core.catalog.model.GroceryItem;
 
 /**
  * This class implements

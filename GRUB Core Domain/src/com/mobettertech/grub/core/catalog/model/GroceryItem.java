@@ -7,7 +7,7 @@
  * This software is the confidential and proprietary information of
  * Mo Better Tech, Co.
  */
-package com.mobettertech.grub.core.catalog.dto;
+package com.mobettertech.grub.core.catalog.model;
 
 import java.awt.image.BufferedImage;
 

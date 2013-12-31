@@ -11,7 +11,7 @@ package com.mobettertech.grub.core.pantry;
 
 import java.util.List;
 
-import com.mobettertech.grub.core.catalog.dto.GroceryItem;
+import com.mobettertech.grub.core.catalog.model.GroceryItem;
 
 /**
  * This class implements the business interface of the Pantry SubSystem.
