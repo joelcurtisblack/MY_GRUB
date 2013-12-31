@@ -60,15 +60,19 @@ public class GroceryCatalogJdbcDao extends JdbcDaoSupport implements IGroceryCat
 	public Collection<GroceryItem> retrieveAllGroceryItems() throws GroceryCatalogDataAccessException 
 	{
 	      List<GroceryItem> bookings = (List<GroceryItem>) this.getJdbcTemplate().query(
-	              new RetrieveAllItemsPreparedStatementCreator( ), null );
+	              new RetrieveAllGroceryItemsPreparedStatementCreator( ), null );
 	        return bookings;
 	}
 
 	@Override
 	public GroceryItem retrieveItems(ItemFilter aItemFilter) throws GroceryCatalogDataAccessException 
 	{
-		// TODO Auto-generated method stub
-		return null;
+		  GroceryItem groceryItem = null;
+		
+	      List<GroceryItem> bookings = (List<GroceryItem>) this.getJdbcTemplate().query(
+	              new RetrieveGroceryItemsPreparedStatementCreator( aItemFilter ), null );
+
+          return groceryItem;
 	}
 
 	@Override
@@ -159,27 +163,51 @@ public class GroceryCatalogJdbcDao extends JdbcDaoSupport implements IGroceryCat
 		}
 	}
 	
+	/**
+	 * 
+	 * @author Joel C. Black
+	 *
+	 */
 	private static class RetrieveGroceryItemsPreparedStatementCreator implements PreparedStatementCreator
 	{
+		static String SQL = "SELECT * FROM " + TABLE_NAME + " ";;
+
+		ItemFilter filter = null;
+		
+		public RetrieveGroceryItemsPreparedStatementCreator(ItemFilter aItemFilter)
+		{
+			super();
+			filter = aItemFilter;
+		}
+		
+		@Override
+		public PreparedStatement createPreparedStatement(Connection arg0) throws SQLException 
+		{
+			// TODO Auto-generated method stub
+			return null;
+		}
 	}
 
-	private static class RetrieveAllGroceryItemsPreparedStatementCreator implements PreparedStatementCreator
-	{
-	}
-
-	private static class UpdateGroceryItemPreparedStatementCreator implements PreparedStatementCreator
-	{
-	}
+//	private static class RetrieveAllGroceryItemsPreparedStatementCreator implements PreparedStatementCreator
+//	{
+//	}
+//
+//	private static class UpdateGroceryItemPreparedStatementCreator implements PreparedStatementCreator
+//	{
+//	}
+//	
+//	private static class UpdateGroceryItemsPreparedStatementCreator implements PreparedStatementCreator
+//	{
+//	}
+//
+//	private static class DeleteGroceryItemPreparedStatementCreator implements PreparedStatementCreator
+//	{
+//	}
+//
+//	private static class DeleteGroceryItemsPreparedStatementCreator implements PreparedStatementCreator
+//	{
+//	}
 	
-	private static class UpdateGroceryItemsPreparedStatementCreator implements PreparedStatementCreator
-	{
-	}
-
-	private static class DeleteGroceryItemPreparedStatementCreator implements PreparedStatementCreator
-	{
-	}
-
-	private static class DeleteGroceryItemsPreparedStatementCreator implements PreparedStatementCreator
-	{
-	}
+	
+	
 }
