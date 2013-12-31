@@ -13,7 +13,7 @@ package com.mobettertech.grub.service.catalog.dao;
 import java.util.Collection;
 
 import com.mobettertech.grub.core.catalog.ItemFilter;
-import com.mobettertech.grub.core.catalog.dto.GroceryItem;
+import com.mobettertech.grub.core.catalog.model.GroceryItem;
 
 
 /**

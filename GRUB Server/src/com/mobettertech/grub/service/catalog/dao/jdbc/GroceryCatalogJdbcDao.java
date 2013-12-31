@@ -10,6 +10,9 @@
  */
 package com.mobettertech.grub.service.catalog.dao.jdbc;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.Collection;
 import java.util.List;
 
@@ -20,7 +23,7 @@ import com.mobettertech.grub.service.catalog.dao.GroceryCatalogColumns;
 import com.mobettertech.grub.service.catalog.dao.GroceryCatalogDataAccessException;
 import com.mobettertech.grub.service.catalog.dao.IGroceryCatalogDao;
 import com.mobettertech.grub.core.catalog.ItemFilter;
-import com.mobettertech.grub.core.catalog.dto.GroceryItem;
+import com.mobettertech.grub.core.catalog.model.GroceryItem;
 
 /**
  * This class implements a JDBC based DAO for the Grocery Catalog database.
@@ -57,7 +60,7 @@ public class GroceryCatalogJdbcDao extends JdbcDaoSupport implements IGroceryCat
 	public Collection<GroceryItem> retrieveAllGroceryItems() throws GroceryCatalogDataAccessException 
 	{
 	      List<GroceryItem> bookings = (List<GroceryItem>) this.getJdbcTemplate().query(
-	              new RetrieveAllItemsPreparedStatementCreator( ), new FlightLegBookingExtractor() );
+	              new RetrieveAllItemsPreparedStatementCreator( ), null );
 	        return bookings;
 	}
 
@@ -96,35 +99,87 @@ public class GroceryCatalogJdbcDao extends JdbcDaoSupport implements IGroceryCat
 		
 	}
 	
-	private class isertItemPreparedStatementCreator implements PreparedStatementCreator
+	
+	/**
+	 * This class implements a PreparedStatementCreator responsible for inserting
+	 * a GroceryItem into the Grocery_Catalog database.
+	 * 
+	 * @author Joel C. Black
+	 *
+	 */
+	private static class InsertGroceryItemPreparedStatementCreator implements PreparedStatementCreator
+	{
+		private static String SQL = "INSERT INTO " + TABLE_NAME + "";
+
+		GroceryItem groceryItem = null;
+		
+		
+		public InsertGroceryItemPreparedStatementCreator(GroceryItem aGroceryItem)
+		{
+			super();
+			groceryItem = aGroceryItem;		
+		}
+		
+		
+		@Override
+		public PreparedStatement createPreparedStatement(Connection arg0) throws SQLException 
+		{
+			// TODO Auto-generated method stub
+			return null;
+		}
+	}
+	
+	/**
+	 * This class implements a PreparedStatementCreator responsible for inserting
+	 * multiple
+	 * 
+	 * @author Joel C. Black
+	 *
+	 */
+	private static class InsertGroceryItemsPreparedStatementCreator implements PreparedStatementCreator
+	{
+		private static String SQL = "INSERT ...";
+
+		List<GroceryItem> groceryItemList;
+		
+		
+		public InsertGroceryItemsPreparedStatementCreator(List<GroceryItem> aGroceryItemsList)
+		{
+			super();
+			groceryItemList = aGroceryItemsList;
+		
+		}
+		
+		
+		@Override
+		public PreparedStatement createPreparedStatement(Connection arg0) throws SQLException 
+		{
+			// TODO Auto-generated method stub
+			return null;
+		}
+	}
+	
+	private static class RetrieveGroceryItemsPreparedStatementCreator implements PreparedStatementCreator
+	{
+	}
+
+	private static class RetrieveAllGroceryItemsPreparedStatementCreator implements PreparedStatementCreator
+	{
+	}
+
+	private static class UpdateGroceryItemPreparedStatementCreator implements PreparedStatementCreator
 	{
 	}
 	
-	private class isertItemsPreparedStatementCreator implements PreparedStatementCreator
-	{
-	}
-	
-	private class RetrieveItemsPreparedStatementCreator implements PreparedStatementCreator
+	private static class UpdateGroceryItemsPreparedStatementCreator implements PreparedStatementCreator
 	{
 	}
 
-	private class RetrieveAllItemsPreparedStatementCreator implements PreparedStatementCreator
+	private static class DeleteGroceryItemPreparedStatementCreator implements PreparedStatementCreator
 	{
 	}
 
-	private class UpdateItemPreparedStatementCreator implements PreparedStatementCreator
-	{
-	}
-	
-	private class UpdateItemsPreparedStatementCreator implements PreparedStatementCreator
-	{
-	}
-
-	private class DeleteItemPreparedStatementCreator implements PreparedStatementCreator
-	{
-	}
-
-	private class DeleteItemsPreparedStatementCreator implements PreparedStatementCreator
+	private static class DeleteGroceryItemsPreparedStatementCreator implements PreparedStatementCreator
 	{
 	}
 }
