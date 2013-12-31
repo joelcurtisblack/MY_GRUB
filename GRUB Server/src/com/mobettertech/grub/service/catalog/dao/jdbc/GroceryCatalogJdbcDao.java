@@ -1,19 +1,41 @@
+/**
+ * GroceryCatalogJdbcDao.java
+ *
+ * Copyright (c) 2013 Mo Better Tech, Co.
+ * All rights reserved.
+ *
+ * This software is the confidential and proprietary information of
+ * Mo Better Tech, Co.
+ * 
+ */
 package com.mobettertech.grub.service.catalog.dao.jdbc;
 
 import java.util.Collection;
 
+import com.mobettertech.grub.service.catalog.dao.GroceryCatalogColumns;
 import com.mobettertech.grub.service.catalog.dao.GroceryCatalogDataAccessException;
 import com.mobettertech.grub.service.catalog.dao.IGroceryCatalogDao;
-import com.mobettertech.grub.service.core.catalog.ItemFilter;
-import com.mobettertech.grub.service.core.catalog.dto.GroceryItem;
+import com.mobettertech.grub.core.catalog.ItemFilter;
+import com.mobettertech.grub.core.catalog.dto.GroceryItem;
 
 public class GroceryCatalogJdbcDao implements  IGroceryCatalogDao
 {
+	
 
+   public static final String TABLE_NAME = "grocery_catalog";
+	
+	
+	
+	
+	
+	
 	@Override
 	public void createItem(GroceryItem aGroceryItem) throws GroceryCatalogDataAccessException 
 	{
-		// TODO Auto-generated method stub
+	      List<FlightLegBooking> bookings = (List<FlightLegBooking>) this.getJdbcTemplate().query(
+	              new GetByFlightLegIdPreparedStatementCreator( aFlightLegId,
+	                    aAsOfDate ), new FlightLegBookingExtractor() );
+	        return bookings;
 		
 	}
 
@@ -27,8 +49,10 @@ public class GroceryCatalogJdbcDao implements  IGroceryCatalogDao
 	@Override
 	public Collection<GroceryItem> retrieveAllItems() throws GroceryCatalogDataAccessException 
 	{
-		// TODO Auto-generated method stub
-		return null;
+	      List<GroceryItem> bookings = (List<GroceryItem>) this.getJdbcTemplate().query(
+	              new GetByFlightLegIdPreparedStatementCreator( aFlightLegId,
+	                    aAsOfDate ), new FlightLegBookingExtractor() );
+	        return bookings;
 	}
 
 	@Override
