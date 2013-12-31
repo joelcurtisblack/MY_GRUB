@@ -8,14 +8,14 @@
  * Mo Better Tech, Co.
  * 
  */
-package com.mobettertech.grub.server.catalog;
+package com.mobettertech.grub.service.catalog;
 
 import java.util.Collection;
 
-import com.mobettertech.grub.core.catalog.GroceryItem;
-import com.mobettertech.grub.core.catalog.IGroceryCatalog;
-import com.mobettertech.grub.core.catalog.IGroceryCatalogDao;
-import com.mobettertech.grub.core.catalog.ItemFilter;
+import com.mobettertech.grub.service.core.catalog.GroceryItem;
+import com.mobettertech.grub.service.core.catalog.IGroceryCatalog;
+import com.mobettertech.grub.service.core.catalog.IGroceryCatalogDao;
+import com.mobettertech.grub.service.core.catalog.ItemFilter;
 
 
 /**

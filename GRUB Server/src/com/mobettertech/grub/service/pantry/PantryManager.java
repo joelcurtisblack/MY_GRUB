@@ -8,13 +8,13 @@
  * Mo Better Tech, Co.
  * 
  */
-package com.mobettertech.grub.server.pantry;
+package com.mobettertech.grub.service.pantry;
 
 import java.util.List;
 
-import com.mobettertech.grub.core.catalog.GroceryItem;
-import com.mobettertech.grub.core.pantry.IPantryManager;
-import com.mobettertech.grub.core.pantry.PantryException;
+import com.mobettertech.grub.service.core.catalog.GroceryItem;
+import com.mobettertech.grub.service.core.pantry.IPantryManager;
+import com.mobettertech.grub.service.core.pantry.PantryException;
 
 
 /**

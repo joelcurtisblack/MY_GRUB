@@ -8,7 +8,7 @@
  * Mo Better Tech, Co.
  * 
  */
-package com.mobettertech.grub.core.catalog.dao;
+package com.mobettertech.grub.service.catalog.dao;
 
 /**
  * This class implements

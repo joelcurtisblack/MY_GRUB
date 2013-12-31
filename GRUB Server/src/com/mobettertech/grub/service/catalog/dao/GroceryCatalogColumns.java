@@ -1,4 +1,4 @@
-package com.mobettertech.grub.core.catalog.dao;
+package com.mobettertech.grub.service.catalog.dao;
 
 /**
  * 

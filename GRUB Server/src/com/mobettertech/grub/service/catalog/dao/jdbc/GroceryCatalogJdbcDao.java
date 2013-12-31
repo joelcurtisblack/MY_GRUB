@@ -1,11 +1,11 @@
-package com.mobettertech.grub.core.catalog.dao.jdbc;
+package com.mobettertech.grub.service.catalog.dao.jdbc;
 
 import java.util.Collection;
 
-import com.mobettertech.grub.core.catalog.ItemFilter;
-import com.mobettertech.grub.core.catalog.dao.GroceryCatalogDataAccessException;
-import com.mobettertech.grub.core.catalog.dao.IGroceryCatalogDao;
-import com.mobettertech.grub.core.catalog.dto.GroceryItem;
+import com.mobettertech.grub.service.catalog.dao.GroceryCatalogDataAccessException;
+import com.mobettertech.grub.service.catalog.dao.IGroceryCatalogDao;
+import com.mobettertech.grub.service.core.catalog.ItemFilter;
+import com.mobettertech.grub.service.core.catalog.dto.GroceryItem;
 
 public class GroceryCatalogJdbcDao implements  IGroceryCatalogDao
 {
